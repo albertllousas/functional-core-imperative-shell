@@ -2,7 +2,7 @@
 
 ## Description
 
-Nowadays almost all the projects with Domain-Driven Design are leveraging on architectures like layered or [hexagonal](https://github.com/albertllousas/implementing-hexagonal-architecture), the last
+Nowadays almost all the projects with Domain-Driven Design are based on architectures like layered or [hexagonal](https://github.com/albertllousas/implementing-hexagonal-architecture), the last
 one the preferred one by DDD community.
 
 But, is there any other architectural style that we can apply instead?
@@ -24,7 +24,7 @@ To drive all the project, we need a problem to solve, in this case it will be a 
 ## DDD model
 
 <p align="center">
-  <img width="65%" src="img/ddd-building-blocks.png">
+  <img width="65%" src="img/ddd-models.png">
 </p>
 
 ## Functional-core, Imperative-shell architecture
