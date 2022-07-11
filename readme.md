@@ -24,7 +24,7 @@ To drive all the project, we need a problem to solve, in this case it will be a 
 ## DDD model
 
 <p align="center">
-  <img width="65%" src="./img/ddd.png">
+  <img width="65%" src="img/ddd-model.png">
 </p>
 
 ## Functional-core, Imperative-shell architecture
