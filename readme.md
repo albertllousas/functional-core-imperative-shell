@@ -2,7 +2,7 @@
 
 ## Description
 
-Nowadays almost all the projects with Domain-Driven Design are leveraging on architectures like layered or hexagonal, the last
+Nowadays almost all the projects with Domain-Driven Design are leveraging on architectures like layered or [hexagonal](https://github.com/albertllousas/implementing-hexagonal-architecture), the last
 one the preferred one by DDD community.
 
 But, is there any other architectural style that we can apply instead?
@@ -24,7 +24,7 @@ To drive all the project, we need a problem to solve, in this case it will be a 
 ## DDD model
 
 <p align="center">
-  <img width="65%" src="img/ddd-model.png">
+  <img width="65%" src="img/ddd-building-blocks.png">
 </p>
 
 ## Functional-core, Imperative-shell architecture
@@ -35,8 +35,8 @@ The baseline of this architectural style is pretty simple, it is based in the pr
   <img width="70%" src="./img/fcis.png">
 </p>
 
-1. [**PURE**](https://en.wikipedia.org/wiki/Pure_function), no [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science))
-2. **IMPURE**, with side effects
+1. [**PURE**](https://en.wikipedia.org/wiki/Pure_function), no [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)), the functional Core
+2. **IMPURE**, with side effects, the Imperative Shell
 
 Besides this split, it is based in some principles, all coming from functional programming:
 
