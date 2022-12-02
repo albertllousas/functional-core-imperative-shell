@@ -79,7 +79,7 @@ with the consequence of data flowing in many directions.
   <img width="50%" src="./img/oop.png">
 </p>
 
-Instead, Functional programming use build systems by composing and chaining functions, connecting the output of one to the input to the next 
+Instead, Functional programming build systems by composing and chaining functions, connecting the output of one to the input to the next 
 creating meaningful pipelines, this pipelines can be seen as **business workflows** where the **data flows in only one direction**, 
 removing the necessity of layers.  
 
