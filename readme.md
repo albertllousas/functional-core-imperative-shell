@@ -76,7 +76,7 @@ requests and responses because the nature of the object communication, the desig
 with the consequence of data flowing in many directions. 
 
 <p align="center">
-  <img width="70%" src="./img/oop.png">
+  <img width="50%" src="./img/oop.png">
 </p>
 
 Instead, Functional programming use build systems by composing and chaining functions, connecting the output of one to the input to the next 
@@ -84,7 +84,7 @@ creating meaningful pipelines, this pipelines can be seen as **business workflow
 removing the necessity of layers.  
 
 <p align="center">
-  <img width="70%" src="./img/fp-flow.png">
+  <img width="50%" src="./img/fp-flow.png">
 </p>
 
 This workflow oriented architecture relies heavily on functional programming concepts like [either monad](https://github.com/albertllousas/monads-explained#monads-explained-in-kotlin) and [railway-programming](https://fsharpforfunandprofit.com/rop/), without them,
