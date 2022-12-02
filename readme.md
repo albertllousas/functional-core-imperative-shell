@@ -45,8 +45,8 @@ Besides this split, it is based in some principles, all coming from functional p
 be mutable.
 3. Dependencies go inward, Imperative Shell can call the Functional Core but not the other way around.
 
-**NOTE:** A function is said to have side effects when it depends on or modifies a state outside its scope, such as variable passed by reference,
-global variable, logging to console, doing database operations ...e
+**NOTE:** A function is said to have side effects when it depends on, or modifies a state outside its scope, such as variable passed by reference,
+global variable, logging to console, perform database operations ...
 
 ### Roles
 
