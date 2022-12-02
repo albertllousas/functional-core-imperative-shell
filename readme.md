@@ -66,12 +66,28 @@ Imperative Shell:
 ### Architecture overview
 
 <p align="center">
-  <img width="70%" src="./img/flow.png">
+  <img width="70%" src="./img/flow-2.png">
 </p>
 
 ### Workflows
 
-This architecture relies heavily on functional programming concepts like [either monad](https://github.com/albertllousas/monads-explained#monads-explained-in-kotlin) and [railway-programming](https://fsharpforfunandprofit.com/rop/), without them,
+In OOP world, architectures such as layered or hexagonal a single usecase (functionality, feature ...) looks like a tangled net of
+requests and responses because the nature of the object communication, the design patterns and side effects everywhere, 
+with the consequence of data flowing in many directions. 
+
+<p align="center">
+  <img width="70%" src="./img/request-response-flow.png">
+</p>
+
+Instead, Functional programming use build systems by composing and chaining functions, connecting the output of one to the input to the next 
+creating meaningful pipelines, this pipelines can be seen as **business workflows** where the **data flows in only one direction**, 
+removing the necessity of layers.  
+
+<p align="center">
+  <img width="70%" src="./img/workflow.png">
+</p>
+
+This workflow oriented architecture relies heavily on functional programming concepts like [either monad](https://github.com/albertllousas/monads-explained#monads-explained-in-kotlin) and [railway-programming](https://fsharpforfunandprofit.com/rop/), without them,
 it would be really difficult to implement.
 
 <p align="center">
@@ -81,19 +97,19 @@ it would be really difficult to implement.
 **Note**: We are only dealing with domain errors, for any other unexpected exception we will let the system crash and deal
 with it at ktor level (ktor framework interceptor).
 
-All the steps in the workflow/pipeline are implemented in the ktor http [router function](./src/main/kotlin/com/bus/shell/entrypoints/http/ReserveSeatsOnABusTripRoute.kt) itself, **putting all side effects together**,
-accumulating them **in the boundary of the app**. **Someone could say** that this is **damaging a good separation of concerns**,
-since we are putting all the workflow together with the http handling, but worse case scenario, 
+All the steps in the workflow are implemented in the ktor http [router function](./src/main/kotlin/com/bus/shell/entrypoints/http/ReserveSeatsOnABusTripRoute.kt) itself, **putting all side effects together**,
+pushing them **to the boundary of the app**. **Someone could say** that we are **not promoting a good separation of concerns**,
+since we are putting all the workflow together with the http concerns, but worse case scenario, 
 **we can separate part of the workflow in a separate function if needed**, in the shell (never in the core).
 
 <p align="center">
   <img width="70%" src="./img/railway-2.png">
 </p>
 
-Separating workflows in a separate functions or classes, the architecture is similar to [hexagonal](https://github.com/albertllousas/implementing-hexagonal-architecture) in terms
+Putting workflows in a separate functions or classes, the architecture could be similar to [hexagonal](https://github.com/albertllousas/implementing-hexagonal-architecture) in terms
 of layers, changing of course, packages and structure.
 
-It **would be preferable** to have all the workflow in the **same function/file/class** (as the first diagram of this section shows), why?
+But it **would be preferable** to have all the workflow in the **same function/file/class** (as the first diagram of this section shows), why?
 - Skip multiple application layers
 - Keep the shell as thin as possible 
 - Promote cohesion
@@ -125,4 +141,5 @@ It **would be preferable** to have all the workflow in the **same function/file/
 # Resources
 
 - https://github.com/42skillz/livecoding-beyond-hexagonal-architecture
+- https://increment.com/software-architecture/primer-on-functional-architecture/
 - https://github.com/kbilsted/Functional-core-imperative-shell/blob/master/README.md
