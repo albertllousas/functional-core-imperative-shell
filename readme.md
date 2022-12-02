@@ -57,10 +57,10 @@ Functional Core:
  abstractions or interfaces ... (similar to ports in hexagonal)
 
 Imperative Shell:
-- Orchestration and implementation of any side effect, including any external dependencies such as persistence, queues, 
+- Implementation of any side effect, including any external dependencies such as persistence, queues, 
   http clients, metrics, logs ...
-- Chassis frameworks, such as Spring, ktor, quarkus and libs, like transactionality, de/serialization to different formats
-- Direct dependency to the Core (Domain)
+- Chassis frameworks, such as Spring, ktor, quarkus or libs, like transactionality, de/serialization ...
+- Workflows, just the orchestration of infrastructure and domain logic to achieve business usecases.
 - It shouldn't contain any domain logic such as business rules, validations or conditional branching (if-else) ...
 
 ### Architecture overview
@@ -69,8 +69,8 @@ Imperative Shell:
   <img width="70%" src="./img/flow-2.png">
 </p>
 
-As you can see, this architecture is compliant with dependency inversion principle, the D of SOLID, higher modules are
-not depending in low-level modules, they depend in abstractions, defined in the core (the domain).
+As you can see, this architecture is compliant with dependency inversion principle, the D of SOLID, higher modules don't
+depend on low-level modules, they depend on abstractions, defined in the core (the domain).
 
 ### Workflows
 
