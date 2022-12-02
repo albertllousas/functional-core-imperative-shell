@@ -54,7 +54,7 @@ Functional Core:
 - Aggregates, Entities or Value Objects will live here, all of them, of course, immutable
 - Any domain logic, in the form of pure functions
 - Side effects declarations (not implementations), we don't want side effects, but we want to make them visible. They will be just types, 
- abstractions or interfaces ...
+ abstractions or interfaces ... (similar to ports in hexagonal)
 
 Imperative Shell:
 - Orchestration and implementation of any side effect, including any external dependencies such as persistence, queues, 
@@ -68,6 +68,9 @@ Imperative Shell:
 <p align="center">
   <img width="70%" src="./img/flow-2.png">
 </p>
+
+As you can see, this architecture is compliant with dependency inversion principle, the D of SOLID, higher modules are
+not depending in low-level modules, they depend in abstractions, defined in the core (the domain).
 
 ### Workflows
 
