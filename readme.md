@@ -74,9 +74,9 @@ depend on low-level modules, they depend on abstractions, defined in the core (t
 
 ### Workflows
 
-In OOP world, architectures such as layered or hexagonal a single usecase (functionality, feature ...) looks like a tangled net of
-requests and responses because the nature of the object communication, the design patterns and side effects everywhere, 
-with the consequence of data flowing in many directions. 
+In OOP world, in architecture styles such as layered or hexagonal, a single usecase (functionality, feature ...) tends to 
+look like a tangled net of requests and responses because the nature of objects communication, the OO design patterns or 
+by having side effects everywhere, with the consequence of data flowing in many directions. 
 
 <p align="center">
   <img width="50%" src="./img/oop.png">
