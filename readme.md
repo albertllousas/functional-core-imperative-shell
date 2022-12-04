@@ -87,7 +87,7 @@ creating meaningful pipelines, this pipelines can be seen as **business workflow
 removing the necessity of layers.  
 
 <p align="center">
-  <img width="50%" src="./img/fp-flow.png">
+  <img width="70%" src="./img/fp-flow.png">
 </p>
 
 This workflow oriented architecture relies heavily on functional programming concepts like [either monad](https://github.com/albertllousas/monads-explained#monads-explained-in-kotlin) and [railway-programming](https://fsharpforfunandprofit.com/rop/), without them,
