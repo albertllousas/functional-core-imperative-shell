@@ -82,9 +82,9 @@ by having side effects everywhere, with the consequence of data flowing in many 
   <img width="50%" src="./img/oop.png">
 </p>
 
-Instead, Functional programming build systems by composing and chaining functions, connecting the output of one to the input to the next 
-creating meaningful pipelines, this pipelines can be seen as **business workflows** where the **data flows in only one direction**, 
-removing the necessity of layers.  
+Instead, Functional programming builds systems by composing and chaining functions, connecting the output of one to the 
+input to the next, creating meaningful pipelines, this pipelines can be seen as **business workflows** by which the 
+**data flows in only one direction**, removing the sense of layers.  
 
 <p align="center">
   <img width="70%" src="./img/fp-flow.png">
